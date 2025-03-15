@@ -6,31 +6,6 @@
 	objectVersion = 70;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		04D0F21226526BC90054C3DE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D0F21126526BC90054C3DE /* WidgetKit.framework */; };
-		04D0F21426526BCA0054C3DE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D0F21326526BCA0054C3DE /* SwiftUI.framework */; };
-		04D0F22026526BCA0054C3DE /* StocksWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04D0F20F26526BC90054C3DE /* StocksWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		04EB45392663ABF50092E528 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EB45382663ABF50092E528 /* Intents.framework */; };
-		04EB45402663ABF50092E528 /* StocksAppIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04EB45372663ABF50092E528 /* StocksAppIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		04D0F21E26526BCA0054C3DE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0448ABBB263C1D79002EB173 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04D0F20E26526BC90054C3DE;
-			remoteInfo = StocksWidgetExtension;
-		};
-		04EB453E2663ABF50092E528 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0448ABBB263C1D79002EB173 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04EB45362663ABF50092E528;
-			remoteInfo = StocksAppIntents;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		04D0F22126526BCA0054C3DE /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -38,8 +13,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				04D0F22026526BCA0054C3DE /* StocksWidgetExtension.appex in Embed App Extensions */,
-				04EB45402663ABF50092E528 /* StocksAppIntents.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,10 +21,8 @@
 
 /* Begin PBXFileReference section */
 		0448ABC3263C1D79002EB173 /* StocksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StocksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		04D0F20F26526BC90054C3DE /* StocksWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StocksWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D0F21126526BC90054C3DE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		04D0F21326526BCA0054C3DE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		04EB45372663ABF50092E528 /* StocksAppIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StocksAppIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EB45382663ABF50092E528 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -63,57 +34,10 @@
 			);
 			target = 0448ABC2263C1D79002EB173 /* StocksApp */;
 		};
-		F986EA0E2D85AD6E0035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Content/LineChart.swift,
-				Models/StockData.swift,
-				Secret/Apikey.swift,
-				Services/StockService.swift,
-			);
-			target = 04D0F20E26526BC90054C3DE /* StocksWidgetExtension */;
-		};
-		F986EA202D85AD720035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				StocksWidget.intentdefinition,
-			);
-			target = 0448ABC2263C1D79002EB173 /* StocksApp */;
-		};
-		F986EA212D85AD720035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 04D0F20E26526BC90054C3DE /* StocksWidgetExtension */;
-		};
-		F986EA222D85AD720035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				StocksWidget.intentdefinition,
-			);
-			target = 04EB45362663ABF50092E528 /* StocksAppIntents */;
-		};
-		F986EA282D85AD750035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				IntentHandler.swift,
-			);
-			target = 04D0F20E26526BC90054C3DE /* StocksWidgetExtension */;
-		};
-		F986EA292D85AD750035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				IntentHandler.swift,
-			);
-			target = 04EB45362663ABF50092E528 /* StocksAppIntents */;
-		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F986E9FB2D85AD6E0035B1C1 /* StocksApp */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F986EA0D2D85AD6E0035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F986EA0E2D85AD6E0035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StocksApp; sourceTree = "<group>"; };
-		F986EA162D85AD720035B1C1 /* StocksWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F986EA202D85AD720035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F986EA212D85AD720035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F986EA222D85AD720035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StocksWidget; sourceTree = "<group>"; };
-		F986EA252D85AD750035B1C1 /* StocksAppIntents */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F986EA282D85AD750035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F986EA292D85AD750035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StocksAppIntents; sourceTree = "<group>"; };
+		F986E9FB2D85AD6E0035B1C1 /* StocksApp */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F986EA0D2D85AD6E0035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StocksApp; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,23 +48,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		04D0F20C26526BC90054C3DE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04D0F21426526BCA0054C3DE /* SwiftUI.framework in Frameworks */,
-				04D0F21226526BC90054C3DE /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04EB45342663ABF50092E528 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04EB45392663ABF50092E528 /* Intents.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -148,8 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				F986E9FB2D85AD6E0035B1C1 /* StocksApp */,
-				F986EA162D85AD720035B1C1 /* StocksWidget */,
-				F986EA252D85AD750035B1C1 /* StocksAppIntents */,
 				04D0F21026526BC90054C3DE /* Frameworks */,
 				0448ABC4263C1D79002EB173 /* Products */,
 			);
@@ -159,8 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				0448ABC3263C1D79002EB173 /* StocksApp.app */,
-				04D0F20F26526BC90054C3DE /* StocksWidgetExtension.appex */,
-				04EB45372663ABF50092E528 /* StocksAppIntents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,8 +93,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				04D0F21F26526BCA0054C3DE /* PBXTargetDependency */,
-				04EB453F2663ABF50092E528 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				F986E9FB2D85AD6E0035B1C1 /* StocksApp */,
@@ -200,43 +101,6 @@
 			productName = StocksApp;
 			productReference = 0448ABC3263C1D79002EB173 /* StocksApp.app */;
 			productType = "com.apple.product-type.application";
-		};
-		04D0F20E26526BC90054C3DE /* StocksWidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04D0F22426526BCA0054C3DE /* Build configuration list for PBXNativeTarget "StocksWidgetExtension" */;
-			buildPhases = (
-				04D0F20B26526BC90054C3DE /* Sources */,
-				04D0F20C26526BC90054C3DE /* Frameworks */,
-				04D0F20D26526BC90054C3DE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				F986EA162D85AD720035B1C1 /* StocksWidget */,
-			);
-			name = StocksWidgetExtension;
-			productName = StocksWidgetExtension;
-			productReference = 04D0F20F26526BC90054C3DE /* StocksWidgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		04EB45362663ABF50092E528 /* StocksAppIntents */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04EB45412663ABF50092E528 /* Build configuration list for PBXNativeTarget "StocksAppIntents" */;
-			buildPhases = (
-				04EB45332663ABF50092E528 /* Sources */,
-				04EB45342663ABF50092E528 /* Frameworks */,
-				04EB45352663ABF50092E528 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = StocksAppIntents;
-			productName = StocksAppIntents;
-			productReference = 04EB45372663ABF50092E528 /* StocksAppIntents.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -248,12 +112,6 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					0448ABC2263C1D79002EB173 = {
-						CreatedOnToolsVersion = 12.5;
-					};
-					04D0F20E26526BC90054C3DE = {
-						CreatedOnToolsVersion = 12.5;
-					};
-					04EB45362663ABF50092E528 = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
@@ -272,28 +130,12 @@
 			projectRoot = "";
 			targets = (
 				0448ABC2263C1D79002EB173 /* StocksApp */,
-				04D0F20E26526BC90054C3DE /* StocksWidgetExtension */,
-				04EB45362663ABF50092E528 /* StocksAppIntents */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0448ABC1263C1D79002EB173 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04D0F20D26526BC90054C3DE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04EB45352663ABF50092E528 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -310,34 +152,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		04D0F20B26526BC90054C3DE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04EB45332663ABF50092E528 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		04D0F21F26526BCA0054C3DE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04D0F20E26526BC90054C3DE /* StocksWidgetExtension */;
-			targetProxy = 04D0F21E26526BCA0054C3DE /* PBXContainerItemProxy */;
-		};
-		04EB453F2663ABF50092E528 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04EB45362663ABF50092E528 /* StocksAppIntents */;
-			targetProxy = 04EB453E2663ABF50092E528 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0448ABD5263C1D84002EB173 /* Debug */ = {
@@ -500,86 +315,6 @@
 			};
 			name = Release;
 		};
-		04D0F22226526BCA0054C3DE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6YDE2UY2S5;
-				INFOPLIST_FILE = StocksWidget/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = fschweizer.StocksApp.StocksWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		04D0F22326526BCA0054C3DE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6YDE2UY2S5;
-				INFOPLIST_FILE = StocksWidget/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = fschweizer.StocksApp.StocksWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		04EB45422663ABF50092E528 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6YDE2UY2S5;
-				INFOPLIST_FILE = StocksAppIntents/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = fschweizer.StocksApp.StocksAppIntents;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		04EB45432663ABF50092E528 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6YDE2UY2S5;
-				INFOPLIST_FILE = StocksAppIntents/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = fschweizer.StocksApp.StocksAppIntents;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -597,24 +332,6 @@
 			buildConfigurations = (
 				0448ABD8263C1D84002EB173 /* Debug */,
 				0448ABD9263C1D84002EB173 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		04D0F22426526BCA0054C3DE /* Build configuration list for PBXNativeTarget "StocksWidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04D0F22226526BCA0054C3DE /* Debug */,
-				04D0F22326526BCA0054C3DE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		04EB45412663ABF50092E528 /* Build configuration list for PBXNativeTarget "StocksAppIntents" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04EB45422663ABF50092E528 /* Debug */,
-				04EB45432663ABF50092E528 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
