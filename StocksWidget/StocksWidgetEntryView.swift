@@ -10,6 +10,8 @@ import WidgetKit
 
 struct StocksWidgetEntryView : View {
     var entry: TimelineProvider.Entry
+    // Uncomment and switch over widget families if wish to implement different layout for a different family of Widget.
+//    @Environment(\.widgetFamily) var widgetFamily
 
     var body: some View {
         VStack {
