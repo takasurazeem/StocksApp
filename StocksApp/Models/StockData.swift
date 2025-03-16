@@ -10,7 +10,7 @@ import Foundation
 struct StockData: Codable, Identifiable {
     struct MetaData: Codable {
         let information: String
-        let symbol: String
+        var symbol: String
         let lastRefreshed: String
         let interval: String
         let outputSize: String
@@ -44,7 +44,7 @@ struct StockData: Codable, Identifiable {
     
     let id = UUID()
     
-    let metaData: MetaData
+    var metaData: MetaData
     let timeSeries5min: [String: StockDataEntry]
     
     var latestClose: String {
@@ -68,14 +68,22 @@ struct StockData: Codable, Identifiable {
     /// Since the free API has a rate limit of 25 API calls a day, let us use their
     /// sample data to our advantage and kick out the API usage and its limit for development
     static var sample: StockData {
-        try! JSONDecoder()
-            .decode(
-                StockData.self,
-                from: Data(
-                    contentsOf: URL(fileURLWithPath: #file)
-                        .deletingLastPathComponent()
-                        .appendingPathComponent("StockData.json")
-                )
-            )
+        let url = URL(fileURLWithPath: #file)
+            .deletingLastPathComponent()
+            .appendingPathComponent("StockData.json")
+        let data = try! Data(contentsOf: url)
+        var stockData = try! JSONDecoder().decode(StockData.self, from: data)
+        stockData.metaData.symbol = [
+            "AAPL",
+            "MSFT",
+            "TSLA",
+            "GOOGL",
+            "AMZN",
+            "FB",
+            "NVDA",
+            "IBM"
+        ].randomElement() ?? "IBM"
+        
+        return stockData
     }
 }

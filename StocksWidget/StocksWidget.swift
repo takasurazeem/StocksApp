@@ -14,11 +14,13 @@ struct StocksWidget: Widget {
     var body: some WidgetConfiguration {
         AppIntentConfiguration(
             kind: kind,
-            intent: ConfigurationAppIntent.self,
+            intent: SelectStockIntent.self,
             provider: TimelineProvider()
         ) { entry in
             StocksWidgetEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
+        .configurationDisplayName("Stocks Symbols")
+        .description("Displays stocks information for a selected symbol")
     }
 }

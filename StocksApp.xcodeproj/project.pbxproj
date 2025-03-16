@@ -10,6 +10,7 @@
 		F986EA622D85F4870035B1C1 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D0F21126526BC90054C3DE /* WidgetKit.framework */; };
 		F986EA632D85F4870035B1C1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D0F21326526BCA0054C3DE /* SwiftUI.framework */; };
 		F986EA702D85F4880035B1C1 /* StocksWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F986EA612D85F4870035B1C1 /* StocksWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F986EB142D876D930035B1C1 /* SelectStockIntent.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = F986EB0B2D876D930035B1C1 /* SelectStockIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -19,6 +20,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = F986EA602D85F4870035B1C1;
 			remoteInfo = StocksWidgetExtension;
+		};
+		F986EB122D876D930035B1C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0448ABBB263C1D79002EB173 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F986EB0A2D876D930035B1C1;
+			remoteInfo = SelectStockIntent;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -40,6 +48,7 @@
 			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
+				F986EB142D876D930035B1C1 /* SelectStockIntent.appex in Embed ExtensionKit Extensions */,
 			);
 			name = "Embed ExtensionKit Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +61,7 @@
 		04D0F21326526BCA0054C3DE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		04EB45382663ABF50092E528 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		F986EA612D85F4870035B1C1 /* StocksWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StocksWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F986EB0B2D876D930035B1C1 /* SelectStockIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = SelectStockIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -80,11 +90,40 @@
 			);
 			target = F986EA602D85F4870035B1C1 /* StocksWidgetExtension */;
 		};
+		F986EAFC2D8766A90035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				StockSymbol.swift,
+			);
+			target = 0448ABC2263C1D79002EB173 /* StocksApp */;
+		};
+		F986EB182D876D930035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F986EB0A2D876D930035B1C1 /* SelectStockIntent */;
+		};
+		F986EB1A2D876DBE0035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				StockSymbol.swift,
+			);
+			target = F986EB0A2D876D930035B1C1 /* SelectStockIntent */;
+		};
+		F986EB1C2D876DCF0035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SelectStockIntent.swift,
+			);
+			target = F986EA602D85F4870035B1C1 /* StocksWidgetExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F986E9FB2D85AD6E0035B1C1 /* StocksApp */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F986EA0D2D85AD6E0035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F986EA7D2D86020D0035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StocksApp; sourceTree = "<group>"; };
-		F986EA642D85F4870035B1C1 /* StocksWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F986EA742D85F4880035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StocksWidget; sourceTree = "<group>"; };
+		F986EA642D85F4870035B1C1 /* StocksWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F986EAFC2D8766A90035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F986EA742D85F4880035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F986EB1A2D876DBE0035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StocksWidget; sourceTree = "<group>"; };
+		F986EB0C2D876D930035B1C1 /* SelectStockIntent */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F986EB1C2D876DCF0035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F986EB182D876D930035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = SelectStockIntent; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +143,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F986EB082D876D930035B1C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -112,6 +158,7 @@
 			children = (
 				F986E9FB2D85AD6E0035B1C1 /* StocksApp */,
 				F986EA642D85F4870035B1C1 /* StocksWidget */,
+				F986EB0C2D876D930035B1C1 /* SelectStockIntent */,
 				04D0F21026526BC90054C3DE /* Frameworks */,
 				0448ABC4263C1D79002EB173 /* Products */,
 			);
@@ -122,6 +169,7 @@
 			children = (
 				0448ABC3263C1D79002EB173 /* StocksApp.app */,
 				F986EA612D85F4870035B1C1 /* StocksWidgetExtension.appex */,
+				F986EB0B2D876D930035B1C1 /* SelectStockIntent.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +201,7 @@
 			);
 			dependencies = (
 				F986EA6F2D85F4880035B1C1 /* PBXTargetDependency */,
+				F986EB132D876D930035B1C1 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				F986E9FB2D85AD6E0035B1C1 /* StocksApp */,
@@ -184,6 +233,28 @@
 			productReference = F986EA612D85F4870035B1C1 /* StocksWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		F986EB0A2D876D930035B1C1 /* SelectStockIntent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F986EB152D876D930035B1C1 /* Build configuration list for PBXNativeTarget "SelectStockIntent" */;
+			buildPhases = (
+				F986EB072D876D930035B1C1 /* Sources */,
+				F986EB082D876D930035B1C1 /* Frameworks */,
+				F986EB092D876D930035B1C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F986EB0C2D876D930035B1C1 /* SelectStockIntent */,
+			);
+			name = SelectStockIntent;
+			packageProductDependencies = (
+			);
+			productName = SelectStockIntent;
+			productReference = F986EB0B2D876D930035B1C1 /* SelectStockIntent.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,6 +269,9 @@
 						CreatedOnToolsVersion = 12.5;
 					};
 					F986EA602D85F4870035B1C1 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					F986EB0A2D876D930035B1C1 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -217,6 +291,7 @@
 			targets = (
 				0448ABC2263C1D79002EB173 /* StocksApp */,
 				F986EA602D85F4870035B1C1 /* StocksWidgetExtension */,
+				F986EB0A2D876D930035B1C1 /* SelectStockIntent */,
 			);
 		};
 /* End PBXProject section */
@@ -230,6 +305,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F986EA5F2D85F4870035B1C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F986EB092D876D930035B1C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +335,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F986EB072D876D930035B1C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -260,6 +349,11 @@
 			isa = PBXTargetDependency;
 			target = F986EA602D85F4870035B1C1 /* StocksWidgetExtension */;
 			targetProxy = F986EA6E2D85F4880035B1C1 /* PBXContainerItemProxy */;
+		};
+		F986EB132D876D930035B1C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F986EB0A2D876D930035B1C1 /* SelectStockIntent */;
+			targetProxy = F986EB122D876D930035B1C1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -392,7 +486,7 @@
 				DEVELOPMENT_TEAM = 6YDE2UY2S5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = StocksApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,7 +508,7 @@
 				DEVELOPMENT_TEAM = 6YDE2UY2S5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = StocksApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,6 +587,67 @@
 			};
 			name = Release;
 		};
+		F986EB162D876D930035B1C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6YDE2UY2S5;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SelectStockIntent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SelectStockIntent;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fschweizer.StocksApp.SelectStockIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F986EB172D876D930035B1C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6YDE2UY2S5;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SelectStockIntent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SelectStockIntent;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fschweizer.StocksApp.SelectStockIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -519,6 +674,15 @@
 			buildConfigurations = (
 				F986EA722D85F4880035B1C1 /* Debug */,
 				F986EA732D85F4880035B1C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F986EB152D876D930035B1C1 /* Build configuration list for PBXNativeTarget "SelectStockIntent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F986EB162D876D930035B1C1 /* Debug */,
+				F986EB172D876D930035B1C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

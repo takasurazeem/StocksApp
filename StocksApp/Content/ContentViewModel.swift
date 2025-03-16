@@ -82,6 +82,8 @@ final class ContentViewModel: ObservableObject {
     }
     
     func getStockData(for symbol: String) {
+        self.stockData.append(.sample)
+        /*
         StockService
             .getStockData(for: symbol)
             .sink { completion in
@@ -98,5 +100,6 @@ final class ContentViewModel: ObservableObject {
                 }
             }
             .store(in: &cancellables)
+         */
     }
 }

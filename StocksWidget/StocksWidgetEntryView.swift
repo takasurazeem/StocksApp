@@ -18,7 +18,7 @@ struct StocksWidgetEntryView : View {
             HStack {
                 Text("Symbol")
                 Spacer()
-                Text(entry.configuration.symbol)
+                Text(entry.stockData?.metaData.symbol ?? "")
             }
             if let stockData = entry.stockData {
                 LineChart(values: stockData.closeValues)
@@ -60,16 +60,16 @@ struct StocksWidgetEntryView : View {
 }
 
 
-extension ConfigurationAppIntent {
-    fileprivate static var ibm: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.symbol = "IBM"
+extension SelectStockIntent {
+    fileprivate static var ibm: SelectStockIntent {
+        let intent = SelectStockIntent()
+        intent.symbol = .sample
         return intent
     }
     
-    fileprivate static var aapl: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.symbol = "AAPL"
+    fileprivate static var aapl: SelectStockIntent {
+        let intent = SelectStockIntent()
+        intent.symbol = .sample
         return intent
     }
 }
