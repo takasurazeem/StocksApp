@@ -22,7 +22,13 @@ struct StocksWidgetEntryView : View {
                 LineChart(values: stockData.closeValues)
                     .fill(
                         LinearGradient(
-                            gradient: Gradient(colors: [.green.opacity(0.7), .green.opacity(0.2), .green.opacity(0)]),
+                            gradient: Gradient(
+                                colors: [
+                                    .green.opacity(0.7),
+                                    .green.opacity(0.2),
+                                    .green.opacity(0)
+                                ]
+                            ),
                             startPoint: .top,
                             endPoint: .bottom
                         )
@@ -42,12 +48,12 @@ struct StocksWidgetEntryView : View {
     SimpleEntry(
         date: .now,
         configuration: .ibm,
-        stockData: nil
+        stockData: .sample
     )
     SimpleEntry(
         date: .now,
         configuration: .aapl,
-        stockData: nil
+        stockData: .sample
     )
 }
 

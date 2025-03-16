@@ -37,4 +37,15 @@ struct StockService {
 
         return nil
     }
+    
+    static func getMockStockData(for symbol: String) async -> StockData? {
+        return .sample
+    }
+    
+    static func getMockStockData(for symbol: String? = nil) -> StockData? {
+        // Read SockData.json and decode it into ``StockData`` object.
+        let jsonURL = Bundle.main.url(forResource: "SockData", withExtension: "json")!
+        let jsonData = try! Data(contentsOf: jsonURL)
+        return try? JSONDecoder().decode(StockData.self, from: jsonData)
+    }
 }

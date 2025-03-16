@@ -73,6 +73,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Content/LineChart.swift,
+				Models/StockData.json,
 				Models/StockData.swift,
 				Secret/Apikey.swift,
 				Services/StockService.swift,

@@ -63,4 +63,19 @@ struct StockData: Codable, Identifiable {
         case metaData = "Meta Data"
         case timeSeries5min = "Time Series (5min)"
     }
+    
+    
+    /// Since the free API has a rate limit of 25 API calls a day, let us use their
+    /// sample data to our advantage and kick out the API usage and its limit for development
+    static var sample: StockData {
+        try! JSONDecoder()
+            .decode(
+                StockData.self,
+                from: Data(
+                    contentsOf: URL(fileURLWithPath: #file)
+                        .deletingLastPathComponent()
+                        .appendingPathComponent("StockData.json")
+                )
+            )
+    }
 }

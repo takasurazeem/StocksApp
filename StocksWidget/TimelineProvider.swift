@@ -21,13 +21,13 @@ struct TimelineProvider: AppIntentTimelineProvider {
     }
     
     func createTimelineEntry(date: Date, configuration: ConfigurationAppIntent) async -> SimpleEntry {
-        let stockData = await StockService.getStockData(for: configuration.symbol)
+        let stockData = await StockService.getMockStockData(for: configuration.symbol)
         let entry = SimpleEntry(date: date, configuration: configuration, stockData: stockData)
         return entry
     }
     
     func createTimeLine(date: Date = Date(), configuration: ConfigurationAppIntent) async -> Timeline<SimpleEntry> {
-        let stockData = await StockService.getStockData(for: configuration.symbol)
+        let stockData = await StockService.getMockStockData(for: configuration.symbol)
         let entry = SimpleEntry(date: date, configuration: configuration, stockData: stockData)
         let timeline = Timeline(entries: [entry], policy: .atEnd)
         return timeline
