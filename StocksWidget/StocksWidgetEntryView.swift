@@ -9,12 +9,28 @@ import SwiftUI
 import WidgetKit
 
 struct StocksWidgetEntryView : View {
-    var entry: Provider.Entry
+    var entry: TimelineProvider.Entry
 
     var body: some View {
         VStack {
-            Text("Symbol:")
-            Text(entry.configuration.symbol)
+            HStack {
+                Text("Symbol")
+                Spacer()
+                Text(entry.configuration.symbol)
+            }
+            if let stockData = entry.stockData {
+                LineChart(values: stockData.closeValues)
+                    .fill(
+                        LinearGradient(
+                            gradient: Gradient(colors: [.green.opacity(0.7), .green.opacity(0.2), .green.opacity(0)]),
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                    )
+                Text(entry.stockData?.latestClose ?? "")
+            } else {
+                Text("Failed to fetch data, check back later.")
+            }
         }
     }
 }
@@ -23,8 +39,16 @@ struct StocksWidgetEntryView : View {
 #Preview(as: .systemSmall) {
     StocksWidget()
 } timeline: {
-    SimpleEntry(date: .now, configuration: .ibm)
-    SimpleEntry(date: .now, configuration: .aapl)
+    SimpleEntry(
+        date: .now,
+        configuration: .ibm,
+        stockData: nil
+    )
+    SimpleEntry(
+        date: .now,
+        configuration: .aapl,
+        stockData: nil
+    )
 }
 
 

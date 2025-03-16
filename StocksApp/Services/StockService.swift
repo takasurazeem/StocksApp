@@ -25,4 +25,16 @@ struct StockService {
             .decode(type: StockData.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
+    
+    static func getStockData(for symbol: String) async -> StockData? {
+        let url = URL(string: "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=\(symbol)&interval=5min&apikey=\(APIKEY)")!
+        
+        let data = try? Data(contentsOf: url)
+        
+        if let data = data {
+            return try? JSONDecoder().decode(StockData.self, from: data)
+        }
+
+        return nil
+    }
 }

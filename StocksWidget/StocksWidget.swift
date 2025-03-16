@@ -15,7 +15,7 @@ struct StocksWidget: Widget {
         AppIntentConfiguration(
             kind: kind,
             intent: ConfigurationAppIntent.self,
-            provider: Provider()
+            provider: TimelineProvider()
         ) { entry in
             StocksWidgetEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)

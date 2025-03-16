@@ -69,10 +69,20 @@
 			);
 			target = F986EA602D85F4870035B1C1 /* StocksWidgetExtension */;
 		};
+		F986EA7D2D86020D0035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Content/LineChart.swift,
+				Models/StockData.swift,
+				Secret/Apikey.swift,
+				Services/StockService.swift,
+			);
+			target = F986EA602D85F4870035B1C1 /* StocksWidgetExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F986E9FB2D85AD6E0035B1C1 /* StocksApp */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F986EA0D2D85AD6E0035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StocksApp; sourceTree = "<group>"; };
+		F986E9FB2D85AD6E0035B1C1 /* StocksApp */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F986EA0D2D85AD6E0035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F986EA7D2D86020D0035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StocksApp; sourceTree = "<group>"; };
 		F986EA642D85F4870035B1C1 /* StocksWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F986EA742D85F4880035B1C1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StocksWidget; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
